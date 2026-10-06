@@ -55,6 +55,30 @@ p {
   background: #fff7ed;
 }
 
+.confirm {
+  padding: 10px;
+  border: 1px solid #fdba74;
+  border-radius: 8px;
+  background: #fff7ed;
+}
+
+.confirm-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7c2d12;
+}
+
+.confirm-note {
+  margin: 6px 0 10px;
+  line-height: 1.5;
+  color: #9a3412;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 .actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -87,6 +111,11 @@ p {
 .btn-stop {
   color: #ffffff;
   background: #dc2626;
+}
+
+.btn-cancel {
+  color: #374151;
+  background: #e5e7eb;
 }
 
 .footer {

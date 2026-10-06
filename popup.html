@@ -19,10 +19,19 @@
       点击开始，批量删贴，随时停止。
     </section>
 
-    <div class="actions">
+    <div class="actions" id="actions">
       <button id="start" class="btn btn-start" type="button">开始</button>
       <button id="stop" class="btn btn-stop" type="button">停止</button>
     </div>
+
+    <section class="confirm" id="confirm" hidden>
+      <p class="confirm-title">⚠️ 确认开始删除？此操作不可恢复。</p>
+      <p class="confirm-note">如需停止请立即点击「停止」，但程序可能在删除下一条后才停下。</p>
+      <div class="actions">
+        <button id="cancel" class="btn btn-cancel" type="button">取消</button>
+        <button id="confirm-start" class="btn btn-stop" type="button">确认删除</button>
+      </div>
+    </section>
 
     <footer class="footer">
       此插件不收集数据，只在当前微博页面运行。

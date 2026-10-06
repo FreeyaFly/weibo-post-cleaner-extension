@@ -32,7 +32,31 @@ function isWeiboTab(tab) {
   return Boolean(tab?.id && tab?.url && tab.url.includes("weibo.com"));
 }
 
+const actionsEl = document.getElementById("actions");
+const confirmEl = document.getElementById("confirm");
+
+function showConfirm(show) {
+  actionsEl.hidden = show;
+  confirmEl.hidden = !show;
+}
+
 document.getElementById("start").addEventListener("click", async () => {
+  const tab = await getActiveTab();
+
+  if (!isWeiboTab(tab)) {
+    setStatus("Open Weibo", "stopped");
+    return;
+  }
+
+  showConfirm(true);
+});
+
+document.getElementById("cancel").addEventListener("click", () => {
+  showConfirm(false);
+});
+
+document.getElementById("confirm-start").addEventListener("click", async () => {
+  showConfirm(false);
   const tab = await getActiveTab();
 
   if (!isWeiboTab(tab)) {
