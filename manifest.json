@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "赛博断舍离 --批量删除微博贴",
+  "version": "1.0",
+  "description": "赛博断舍离：手动开始，批量删贴，随时停止。已删除内容不可恢复。",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "host_permissions": [
+    "https://weibo.com/*",
+    "https://*.weibo.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "赛博断舍离",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
